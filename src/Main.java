@@ -22,7 +22,7 @@ public class Main {
         ArrayList<Integer> integerArrayListFirst = readLineInteger(1, bufferedReader);
 
 
-        V = integerArrayListFirst.get(0);
+        V = integerArrayListFirst.get(0); //这几部分应该没有问题
 
 //        System.out.println("This is V(n) value:" + V);
 
@@ -36,7 +36,7 @@ public class Main {
 
         m = integerArrayListThird.get(0);
 
-            for (int i=0;i<E;i++) {
+            for (int i=0;i<E;i++) { //获取边的 连接情况
                 ArrayList<Integer> tempList = readLineInteger(1, bufferedReader);
 //                System.out.println("This is list:"+tempList);
 
@@ -52,7 +52,7 @@ public class Main {
 
         System.out.println(V+" "+E+" "+(m+1));
 
-        for (int i=0;i<V;i++){
+        for (int i=0;i<V;i++){ // 第二部分 关于 Constraints of type 1 (for each role): r t can be played by p 1 , p 2 , p 6
 //            System.out.print((m+1)+" ");
 //            for (int j=0;j<m+1;j++){
 //                System.out.print(1+" ");
@@ -70,7 +70,7 @@ public class Main {
 //            System.out.println("!!!!!!!!!!!!!!!!!!!!"+edgesConnectArrayList.get(i));
 //        }
 
-        for (int i=0;i<E;i++){
+        for (int i=0;i<E;i++){ //关于第三部分 Constraints of type 2 (for each scene): in s u the roles r 1 , r 3 , r 5 , r 6 and r 7 play
             if (edgesConnect.getNewx(edgesConnectArrayList.get(i))<edgesConnect.getNewy(edgesConnectArrayList.get(i))) {
                 System.out.println(2 + " " + edgesConnect.getNewx(edgesConnectArrayList.get(i)) + " " + edgesConnect.getNewy(edgesConnectArrayList.get(i)));
             }else
@@ -88,7 +88,7 @@ public class Main {
             lineString = bufferedReader.readLine();
             i++;
         }
-        lineString = lineString.replaceAll(" ","");
+        lineString = lineString.replaceAll(" ",""); //清除了所有的空格
         tempString = lineString.split(" ");
 
         for (String aTempString : tempString) {
